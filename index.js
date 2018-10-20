@@ -84,7 +84,7 @@
 //     }
 // }
 
-// Answer:
+// Answer 1:
 // O(n) Linear. As n increases so does the number of operations.
 
 
@@ -97,5 +97,17 @@
 //     }
 // }
 
-// Answer:
-// O(1)
+// Answer 2:
+// O(1) constant
+
+// Question 3:
+// Determine the time complexity for the following function
+
+// function logAtLeast10(n) {
+//     for (var i = 1; i <= Math.max(n, 10); i++) {
+//         console.log(i);
+//     }
+// }
+
+// Answer 3
+// O(n) linear
