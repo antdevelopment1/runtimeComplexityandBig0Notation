@@ -31,6 +31,12 @@
 // If we start to increase our input to our algorithm by increasing that input by 1, we increase the amount of time it takes
 // to execute the algorithm by 1 plus a little bit of extra work.
 
+// Quadratic
+// Not great. Every element in a data set has to compared to every other element. Takes a substatial amount of time.
+
+// Exponential
+// This is one we want to avoid if at all possible. If you add a single element to a data set or collection the processing power required doubles.
+// This is a big no no.
 
 // ==================================================================================
 // Determining The Runtime Complexity of a Function, ALgorithm, or any Code Execution
