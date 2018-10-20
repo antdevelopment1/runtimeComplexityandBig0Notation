@@ -26,6 +26,11 @@
 // If out counter is based on the value passed in the function the higher the number passed the more steps added thus inceasing the
 // the amount of time it would take for a given algorithm or funtion to run.
 
+// Quasilinear
+// With quasilinear runtime if doubling the number of elements you're iterating over doesn't double the amount of work.
+// If we start to increase our input to our algorithm by increasing that input by 1, we increase the amount of time it takes
+// to execute the algorithm by 1 plus a little bit of extra work.
+
 
 // ==================================================================================
 // Determining The Runtime Complexity of a Function, ALgorithm, or any Code Execution
