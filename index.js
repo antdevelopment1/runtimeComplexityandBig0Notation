@@ -41,3 +41,12 @@
 // ==================================================================================
 // Determining The Runtime Complexity of a Function, ALgorithm, or any Code Execution
 // ==================================================================================
+
+// Question 1:
+// Simplify the big O expression as much as possible - O(n + 10) 
+
+// Answer:
+// O(n)
+
+
+
