@@ -71,3 +71,18 @@
 
 // Answer:
 // O(n)
+
+// ===================================
+// Solving My First RunTime Complexity
+// ===================================
+// Question 1:
+// Determine the time complexity for the following function 
+
+// function logUpTo(n) {
+//     for (var i = 1; i <= n; i++) {
+//         console.log(i);
+//     }
+// }
+
+// Answer:
+// O(n) Linear. As n increases so does the number of operations.
