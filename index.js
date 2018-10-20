@@ -72,9 +72,9 @@
 // Answer:
 // O(n)
 
-// ===================================
-// Solving My First RunTime Complexity
-// ===================================
+// ============================================
+// Solving My First RunTime Complexity Problems
+// ============================================
 // Question 1:
 // Determine the time complexity for the following function 
 
@@ -86,3 +86,16 @@
 
 // Answer:
 // O(n) Linear. As n increases so does the number of operations.
+
+
+// Question 2:
+// Determine the time complexity for the following function 
+
+// function logAtMost10(n) {
+//     for (var i = 1; i <= Math.min(n, 10); i++) {
+//         console.log(i);
+//     }
+// }
+
+// Answer:
+// O(1)
