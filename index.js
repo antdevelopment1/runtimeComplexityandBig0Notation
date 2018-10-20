@@ -48,5 +48,8 @@
 // Answer:
 // O(n)
 
+// Question 2:
+// Simplify the big O expression as much as possible - O(100 * n) 
 
-
+// Answer:
+// O(n)
