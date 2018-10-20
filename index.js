@@ -13,6 +13,13 @@
 // What does each runtime mean?
 // ============================
 
+// Constant
+// With a constant runtime no matter how many elements we are working with the algorithm or operations
+// will always take the same amount of time.
+
+// Logarithmic
+// With a logrithmic runtime if doubling the number of elements you are iterating over doesn't double the amount of work, 
+// it is considered logrithmic
 
 // ==================================================================================
 // Determining The Runtime Complexity of a Function, ALgorithm, or any Code Execution
