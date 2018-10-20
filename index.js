@@ -62,4 +62,12 @@
 
 // Question 4:
 // Simply the following big O expression as much as possible -  O(n^2 + n^3) 
+
+// Answer:
 // O(n ^ 3)
+
+// Question 5:
+// Simply the following big O expression as much as possible - O(n + n + n + n) 
+
+// Answer:
+// O(n)
