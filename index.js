@@ -21,6 +21,12 @@
 // With a logrithmic runtime if doubling the number of elements you are iterating over doesn't double the amount of work, 
 // it is considered logrithmic
 
+// Linear
+// An example of linear runntime would be when iterating through the elements in a collection of data such as an array
+// If out counter is based on the value passed in the function the higher the number passed the more steps added thus inceasing the
+// the amount of time it would take for a given algorithm or funtion to run.
+
+
 // ==================================================================================
 // Determining The Runtime Complexity of a Function, ALgorithm, or any Code Execution
 // ==================================================================================
