@@ -59,3 +59,7 @@
 
 // Answer:
 // O(1)
+
+// Question 4:
+// Simply the following big O expression as much as possible -  O(n^2 + n^3) 
+// O(n ^ 3)
