@@ -53,3 +53,9 @@
 
 // Answer:
 // O(n)
+
+// Question 3:
+// Simply the following big O expression as much as possible - O(25) 
+
+// Answer:
+// O(1)
