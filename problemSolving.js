@@ -26,3 +26,25 @@
 // Explore examples with empty inputs
 
 // Explore examples with invalid inputs
+
+
+
+// =====================
+// Break It Down Step 3:
+// =====================
+
+// Write a function that takes a string and returns counts of each character in the string
+
+function charCount(str) {
+
+    // Make an object to return to the end
+
+    // Lower case input
+
+    // Evalute each letter inside of string
+        // If the character is a number/letter and is a key in object, add one to count
+        // If the character is a number/letter and is not a key in the object, add it to the object and set its value to 1
+        // If the character is something else  (space, period, ...etc) don't do anything
+
+    // Return an object with each letter and the correct count as the output
+}
