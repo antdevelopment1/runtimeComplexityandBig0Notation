@@ -35,7 +35,7 @@
 
 // Write a function that takes a string and returns counts of each character in the string
 
-function charCount(str) {
+// function charCount(str) {
 
     // Make an object to return to the end
 
@@ -47,4 +47,35 @@ function charCount(str) {
         // If the character is something else  (space, period, ...etc) don't do anything
 
     // Return an object with each letter and the correct count as the output
+// }
+
+
+function charCount(str) {
+
+    var object = {};
+
+    for (var char of str) {
+        if (isAlphaNumeric(char)) {
+            char = char.toLowerCase();
+            object[char] = ++object[char] || 1;
+        }
+    }
+
+    console.log(object);
+
 }
+
+function isAlphaNumeric(char) {
+
+    var code = char.charCodeAt(0);
+
+    if (!(code > 47 && code < 58) &&
+        !(code > 64 && code < 91) &&
+        !(code >96 && code < 123)) {
+            return false;
+        } else {
+            return true;
+        }
+}
+
+charCount('hello how are you there I\'m doing really well. How about you?');
