@@ -16,3 +16,12 @@ function getStudentNames(students) {
 }
 
 console.log(getStudentNames([{ name: 'Steve',}, { name: 'Mike'}, { name: 'John'}]));
+
+
+// Create a function that returns the number of arguments it was called with.
+function getNumOfArgs() {
+    console.log(arguments.length);
+    return arguments.length;
+}
+
+getNumOfArgs(true, false);
