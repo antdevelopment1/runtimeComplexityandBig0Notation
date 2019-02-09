@@ -27,7 +27,8 @@ function validAnagram(first, second) {
     }
 
     console.log(lookup);
-    return true;
+    // return true;
 
 }
-validAnagram('racecar', 'racecar');
+
+validAnagram('racecar', 'carrace');
