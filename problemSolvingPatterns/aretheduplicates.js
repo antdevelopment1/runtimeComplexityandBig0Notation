@@ -25,26 +25,10 @@ function areThereDuplicates() {
 
 console.log(areThereDuplicates(1,2,2,5,6,7,7));
 
-// Mutilple Pointer Pattern
-//  function areThereDuplicates(...args) {
-//         // Two pointers
-//     args.sort((a,b) => a > b);
-//     let start = 0;
-//     let next = 1;
-//     while(next < args.length){
-//         if(args[start] === args[next]){
-//             return true
-//         }
-//         start++
-//         next++
-//     }
-//     return false
-// }
-
 function areThereDuplicates(...args) {
     //   Write a sorted function that sorts the arguments
     args.sort(function(a, b) {
-        return a + b;
+        return a > b;
     }) 
     // Save first pointer in varible and set it to 0 to hold the value that will target the fisrt spot in the array.
     let first = 0;
@@ -66,5 +50,5 @@ function areThereDuplicates(...args) {
     return false;
 }
 
-console.log(areThereDuplicates(1,2,5,6,7));
+console.log(areThereDuplicates(1,2,5,6,7,7));
 
