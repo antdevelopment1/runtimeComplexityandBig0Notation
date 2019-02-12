@@ -1,23 +1,24 @@
 // Given a sorted array of integers and a target average determine if there is a pair of values in the array where the average of array
 // equals the target average. There may be more than one pair that matches the average target
 
-// function averagePair(arr, target){
-//     // Save first index value
-//     let first = 0;
-//     // Save second index value
-//     let second = 1;
+function averagePair(arr, target){
+    // Save first index value
+    let first = 0;
+    // Save second index value
+    let second = arr.length-1;
 
-//     while (second < arr.length) {
-//         if ((arr[first] + arr[second]) / 2 === target) {
-//             return true;
-//         } else {
-//             first++;
-//             second++;
-//         }
-//     }
-//     return false;
-   
-// }
+    while (first < second) {
+        let avg = (arr[first] + arr[second]) / 2;
+        if (avg === target) {
+            return true;
+        } else if (avg < target) {
+            first++;
+        } else {
+            second--;
+        }
+    }
+    return false;
+}
 
 function averagePair(arr, num){
     let start = 0
