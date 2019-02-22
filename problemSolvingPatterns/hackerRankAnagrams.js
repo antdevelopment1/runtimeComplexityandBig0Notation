@@ -13,6 +13,9 @@ function anagram(str) {
         return -1;
     }
 
+    let obj = {};
+    let obj2 = {};
+
     // Set up a for loop that loops through the word
     for (let i = 0; i < splitString.length; i++) {
         // Check if index is less than or equal to the middle
@@ -25,22 +28,38 @@ function anagram(str) {
 
     for (let i = 0; i < firstString.length; i++) {
         let letter = firstString[i];
-        if ((secondString.includes(letter))) {
-            let splitString = secondString.split("");
-            console.log(splitString)
-            // console.log(secondString.indexOf(letter))
-            let result = splitString.splice(secondString.indexOf(letter), 1)
-            console.log(splitString)
-        }
-        console.log(splitString)
-
-        // for (let j = 0; j < secondString.length; j++) {
-        //     let letter = secondString[j];
-        // }
+        if (!(secondString.includes(letter))) {
+            count++;
+        }   
     }
-   
 
+    for (let  i = 0; i < firstString.length; i++) {
+        let letter = firstString[i];
+        if (obj[letter]) {
+            obj[letter] += 1;
+        } else {
+            obj[letter] = 1;
+        }
+    }
+
+    for (let  i = 0; i < secondString.length; i++) {
+        let letter = secondString[i];
+        if (obj2[letter]) {
+            obj2[letter] += 1;
+        } else {
+            obj2[letter] = 1;
+        }
+    }
+    // Create an object out of the first string instead of the second string
+    // If any keys values in the onject are greater than 1 and inside the second string
+    for (let key in obj) {
+        if (obj[key] > 1 && secondString.includes(key) && (!(obj[key] === obj2[key]))) {
+            obj[key] -= 1;
+            count += obj[key];
+        }
+    }
+    
     return count;
 }
     
-console.log(anagram('fdhlvosfpafhalll'))
+console.log(anagram(''))
