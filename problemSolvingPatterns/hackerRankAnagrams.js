@@ -4,6 +4,9 @@ function anagram(str) {
     let splitString = str.split("");
     let firstString = "";
     let secondString = "";
+    let pointerOne = 0;
+    let pointerTwo = splitString.length - 1;
+    let count = 0;
 
     // Checks if the length of the string even or odd
     if (str.length % 2 !== 0) {
@@ -20,52 +23,24 @@ function anagram(str) {
         }
     }
 
-    // Create a first empty object
-    let firstObj = {};
-    // Create a second empty object
-    let secondObj = {};
-    // Create an empty count
-    let count = 0;
-    
-
-    // Create a for loop that loops through first string
     for (let i = 0; i < firstString.length; i++) {
-        // We check to see if the value we are currently looping over is in the object
-        if (firstObj[firstString[i]]) {
-            // If it is increment the keys value by 1
-            firstObj[firstString[i]] += 1;
-        } else {
-            // Otherwise set it = to 1
-            firstObj[firstString[i]] = 1;
+        let letter = firstString[i];
+        if ((secondString.includes(letter))) {
+            let splitString = secondString.split("");
+            console.log(splitString)
+            // console.log(secondString.indexOf(letter))
+            let result = splitString.splice(secondString.indexOf(letter), 1)
+            console.log(splitString)
         }
-    }
-    console.log(firstObj)
-    // Create a for loop that loops through second string
-    for (let i = 0; i < secondString.length; i++) {
-        // We check to see if the value we are currently looping over is in the object
-        if (secondObj[secondString[i]]) {
-            secondObj[secondString[i]] += 1
-            // If it is increment the keys value by 1
-        } else {
-        // Otherwise set it = to 1
-        secondObj[secondString[i]] = 1;
-        }
-    }
-    console.log(secondObj)
+        console.log(splitString)
 
-    // We loop through the object
-    for (let key in firstObj) {
-        console.log(key)
-        // if (!(key in secondObj)) {
-        //     count += 1;
+        // for (let j = 0; j < secondString.length; j++) {
+        //     let letter = secondString[j];
         // }
-        // If the current value is in the second object and the keys value is equal to 1 delete it from the other obejct
-        // If the current value is in the object but the keys value is greater than 1 subtract 1 from the keys value
-        // If the current value is not the second object we want to reassign that value to the value in the second object and remove it and increment count + 1
     }
+   
 
-    // Return count
     return count;
 }
     
-console.log(anagram('aaabbb'))
+console.log(anagram('fdhlvosfpafhalll'))
