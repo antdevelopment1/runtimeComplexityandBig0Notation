@@ -26,11 +26,11 @@ function areThereDuplicates() {
     return false;
 }
 
-console.log(areThereDuplicates(1,2,2,5,6,7,7));
+// console.log(areThereDuplicates(1,2,2,5,6,7,7));
 
 function areThereDuplicates(...args) {
     //   Write a sorted function that sorts the arguments
-   
+    args.sort();
     // Save first pointer in varible and set it to 0 to hold the value that will target the fisrt spot in the array.
     let first = 0;
     // Save second pointer in variable and set it to 1 to hold the value that will target the second spot in the array.
@@ -51,5 +51,5 @@ function areThereDuplicates(...args) {
     return false;
 }
 
-// console.log(areThereDuplicates(1,2,5,6,7,7));
+console.log(areThereDuplicates(1,7,5,6,0,7));
 
