@@ -14,7 +14,6 @@ function anagram(str) {
     }
 
     let obj = {};
-    let obj2 = {};
 
     // Set up a for loop that loops through the word
     for (let i = 0; i < splitString.length; i++) {
@@ -24,13 +23,6 @@ function anagram(str) {
         } else if (i > middle) {
             secondString += splitString[i];
         }
-    }
-
-    for (let i = 0; i < firstString.length; i++) {
-        let letter = firstString[i];
-        if (!(secondString.includes(letter))) {
-            count++;
-        }   
     }
 
     for (let  i = 0; i < firstString.length; i++) {
@@ -44,22 +36,19 @@ function anagram(str) {
 
     for (let  i = 0; i < secondString.length; i++) {
         let letter = secondString[i];
-        if (obj2[letter]) {
-            obj2[letter] += 1;
+        if (!obj[letter]) {
         } else {
-            obj2[letter] = 1;
+            obj[letter] -= 1;
         }
     }
-    // Create an object out of the first string instead of the second string
-    // If any keys values in the onject are greater than 1 and inside the second string
+
     for (let key in obj) {
-        if (obj[key] > 1 && secondString.includes(key) && (!(obj[key] === obj2[key]))) {
-            obj[key] -= 1;
-            count += obj[key];
-        }
+        count += obj[key];
     }
+    // console.log(obj)
+   
     
     return count;
 }
     
-console.log(anagram(''))
+console.log(anagram('aaabbb'))
