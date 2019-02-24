@@ -30,3 +30,47 @@
 // }
 
 // validAnagram('racecar', 'carfact');
+
+
+// Given a string, return the character that is most
+// commonly used in the string.
+function charCount(str) {
+
+    // Create an empty object
+    const obj = {};
+    // Create a temp variable
+    let temp = 0;
+    let currentLetter = '';
+
+    // Loop of the string
+    for (let i = 0; i < str.length; i++) {
+        let letter = str[i].toLowerCase();
+        // Check if the current value is inside the object
+        if (obj[letter]) {
+            // If it is add 1
+            obj[letter] += 1;
+        } else {
+            // Else set it equal to 1
+            obj[letter] = 1;
+        }
+        // obj[' '] = 0;
+    }
+
+    // Loop through the object
+    for (let keys in obj) {
+        // Check if the current value we are looping over is greater than out temp value
+
+        if (obj[keys] > temp) {
+            // If it is then reassign the the temp variable
+            temp = obj[keys]
+            currentLetter = keys;
+        }
+
+        returnValue = `${currentLetter}:${temp}`
+    }
+
+    return returnValue;
+
+}
+
+console.log(charCount("hello there how are you"));
