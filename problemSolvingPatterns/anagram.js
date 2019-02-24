@@ -104,3 +104,20 @@ function charObj(str) {
 
     return obj;
 }
+
+// Another alternative for solving an anagram using a helper function
+function anagram(stringA, stringB) {
+    let string1 = helperFunction(stringA);
+    let string2 = helperFunction(stringB);
+    console.log(string1)
+    console.log(string2)
+
+    return string1 === string2;
+}
+
+function helperFunction(str) {
+    return str.replace(/[^\w]/g, '').toLowerCase().split("").sort().join("");
+}
+
+
+console.log(anagram("racecar", "carrace"))
