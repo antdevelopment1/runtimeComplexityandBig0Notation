@@ -36,8 +36,8 @@ function anagram(str) {
 
     for (let  i = 0; i < secondString.length; i++) {
         let letter = secondString[i];
-        if (!obj[letter]) {
-        } else {
+        if (!obj[letter]) {}
+        else {
             obj[letter] -= 1;
         }
     }
