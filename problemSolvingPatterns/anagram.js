@@ -34,43 +34,73 @@
 
 // Given a string, return the character that is most
 // commonly used in the string.
-function charCount(str) {
+// function charCount(str) {
 
-    // Create an empty object
-    const obj = {};
-    // Create a temp variable
-    let temp = 0;
-    let currentLetter = '';
+//     // Create an empty object
+//     const obj = {};
+//     // Create a temp variable
+//     let temp = 0;
+//     let currentLetter = '';
 
-    // Loop of the string
-    for (let i = 0; i < str.length; i++) {
-        let letter = str[i].toLowerCase();
-        // Check if the current value is inside the object
-        if (obj[letter]) {
-            // If it is add 1
-            obj[letter] += 1;
-        } else {
-            // Else set it equal to 1
-            obj[letter] = 1;
-        }
-        // obj[' '] = 0;
+//     // Loop of the string
+//     for (let i = 0; i < str.length; i++) {
+//         let letter = str[i].toLowerCase();
+//         // Check if the current value is inside the object
+//         if (obj[letter]) {
+//             // If it is add 1
+//             obj[letter] += 1;
+//         } else {
+//             // Else set it equal to 1
+//             obj[letter] = 1;
+//         }
+//         // obj[' '] = 0;
+//     }
+
+//     // Loop through the object
+//     for (let keys in obj) {
+//         // Check if the current value we are looping over is greater than out temp value
+
+//         if (obj[keys] > temp) {
+//             // If it is then reassign the the temp variable
+//             temp = obj[keys]
+//             currentLetter = keys;
+//         }
+
+//         returnValue = `${currentLetter}:${temp}`
+//     }
+
+//     return returnValue;
+
+// }
+
+// console.log(charCount("hello there how are you"));
+
+
+// Helper Function Anagram Solution
+function anagram(stringA, stringB) {
+    let obj1 = charObj(stringA);
+    let obj2 = charObj(stringB);
+
+    if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+        return false;
     }
-
-    // Loop through the object
-    for (let keys in obj) {
-        // Check if the current value we are looping over is greater than out temp value
-
-        if (obj[keys] > temp) {
-            // If it is then reassign the the temp variable
-            temp = obj[keys]
-            currentLetter = keys;
+    
+    for (let key in obj1) {
+        if (obj1[key] !== obj2[key]) {
+            return false;
         }
-
-        returnValue = `${currentLetter}:${temp}`
     }
-
-    return returnValue;
-
+    return true;
 }
 
-console.log(charCount("hello there how are you"));
+console.log(anagram("racecar", "carrace"))
+
+function charObj(str) {
+    const obj = {};
+
+    for (let char of str.replace(/[^\w]/g, ''.toLowerCase())) {
+        obj[char] = obj[char] + 1 || 1;
+    }
+
+    return obj;
+}
